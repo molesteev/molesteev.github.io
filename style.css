@@ -2,7 +2,7 @@
     font-family: 'PressStart';
     font-style: normal;
     font-weight: 400;
-    src: local('Press Start 2P'), local('PressStart2P-Regular'), url(http://themes.googleusercontent.com/static/fonts/pressstart2p/v2/8Lg6LX8-ntOHUQnvQ0E7o3dD2UuwsmbX3BOp4SL_VwM.woff) format('woff');
+    src: local('Press Start 2P'), local('PressStart2P-Regular'), url(https://themes.googleusercontent.com/static/fonts/pressstart2p/v2/8Lg6LX8-ntOHUQnvQ0E7o3dD2UuwsmbX3BOp4SL_VwM.woff) format('woff');
 }
 
 
@@ -12,14 +12,14 @@ body {
 }
 
 #container {
-    width: 70vw;
-    margin: 3vw auto;
+    width: 70vw auto;
+    margin: 20vw auto;
 }
 
 h1 {
     text-align: center;
     color: #fff;
-    font-size: 3.4em;
+    font-size: 5em;
     letter-spacing: 0px;
     font-family: 'PressStart';
     font-weight: 400;
@@ -27,7 +27,7 @@ h1 {
     margin: 0;
     line-height: 0;
     /*Animation*/
-    animation: glitch1 5s infinite;
+    animation: glitch1 2.5s infinite;
 }
 
 h1:nth-child(2) {
