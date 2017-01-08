@@ -5,46 +5,80 @@
     src: local('Press Start 2P'), local('PressStart2P-Regular'), url(https://themes.googleusercontent.com/static/fonts/pressstart2p/v2/8Lg6LX8-ntOHUQnvQ0E7o3dD2UuwsmbX3BOp4SL_VwM.woff) format('woff');
 }
 
+
 /* latin */
+
 @font-face {
-  font-family: 'Roboto Mono';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto Mono'), local('RobotoMono-Regular'), url(https://fonts.gstatic.com/s/robotomono/v4/hMqPNLsu_dywMa4C_DEpY44P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Mono'), local('RobotoMono-Regular'), url(https://fonts.gstatic.com/s/robotomono/v4/hMqPNLsu_dywMa4C_DEpY44P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
 body {
+    position:relative;
     background-color: #333;
     font-family: 'Roboto Mono', monospace;
-
 }
 
-a{
-  text-decoration: none;
-  font-weight: bold;
-  color: #666;
+body a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #888;
 }
-a:hover{
-  color: #ccc;
+/*
+div {
+  display: inline-block;
+  position: relative;
+  top: 0px;
+  margin: 0;
 }
-
+*/
+body a:hover {
+    color: #ddd;
+}
 
 #container {
-    width: 70vw auto;
-    margin: 3vw auto;
+    width: 80vw auto;
+    margin: 2.5em auto;
 }
 
 h2 {
-  text-align: center;
-  color: #888;
-  font-size: 15pt;
+    text-align: center;
+    color: #aaa;
+    font-size: 1.5em;
+    margin: 3vw auto;
 }
 
-#container > h1 {
+h3 {
+    color: #aaa;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.links {
+    text-align: center;
+    margin: 2vw auto;
+}
+
+#container a {
+    color: inherit;
+    font-size: inherit;
+}
+
+.help {
+    text-align: center;
+    color: #555;
+}
+
+#container>h1 {
     text-align: center;
     color: #fff;
-    font-size: 3em;
+    font-size: 4em;
     letter-spacing: 0px;
     font-family: 'PressStart';
     font-weight: 400;
@@ -55,12 +89,12 @@ h2 {
     animation: glitch1 2.5s infinite;
 }
 
-#container > h1:nth-child(2) {
+#container>h1:nth-child(2) {
     color: #67f3da;
     animation: glitch2 5s infinite;
 }
 
-#container > h1:nth-child(3) {
+#container>h1:nth-child(3) {
     color: #f16f6f;
     animation: glitch3 5s infinite;
 }
