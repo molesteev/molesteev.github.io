@@ -4,21 +4,21 @@
 <head>
     <title>Bookmarks</title>
     <meta charset="utf-8">
-    <style>
-        @import "main.css";
-    </style>
+    <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="shortcut icon" href=favicon.ico>
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
 </head>
 
 <body>
     <div id="container">
         <h1>molesteev</h1>
         <h1>molesteev</h1>
-        <h1><a href="index.html">molesteev</a></h1>
+        <h1><a href="/index.html">molesteev</a></h1>
     </div>
     <h2>My bookmarks (mainly in Russian)</h2>
-    <div class="blocklist">
-        <div class="javascript block">
+    <div class="grid grid-pad list">
+        <div class="javascript col-1-3">
+          <div class="content">
             <h3>Javascript resources</h3>
             <ul>
                 <li><a href="https://proglib.io/p/get-started-javascript/">Getting started</a></li>
@@ -32,8 +32,10 @@
                 <li><a href="https://tproger.ru/translations/asynchronous-javascript/">Asynchronous js (article)</a></li>
                 <li><a href="https://karmazzin.gitbooks.io/eloquentjavascript_ru/content/">Eloquent js (book)</a></li>
             </ul>
+            </div>
         </div>
-        <div class="node block">
+        <div class="node col-1-3">
+          <div class="content">
             <h3>Node.js docs and manuals</h3>
             <ul>
                 <li><a href="http://nodeguide.ru/doc/">Node.js guides</a></li>
@@ -43,17 +45,22 @@
                 <li><a href="https://proglib.io/p/beginners-guide-to-node-js/">Beginners guide to node</a></li>
                 <li><a href="https://proglib.io/p/nodejs-resources/">Nodejs resources</a></li>
             </ul>
+            </div>
         </div>
-        <div class="other block">
+        <div class="other col-1-3">
+          <div class="content">
           <h3>Everything else</h3>
           <ul>
             <li><a href="https://danielkummer.github.io/git-flow-cheatsheet/index.ru_RU.html">Git flow cheatsheet</a></li>
+            <li><a href="http://www.dejurka.ru/web-design/responsive_css_grid_systems/">Responsive css grids</a></li>
+            <li><a href="https://thisisdallas.github.io/Simple-Grid/">Simple Grid CSS</a></li>
           </ul>
+          </div>
         </div>
     </div>
     <br>
     <div class="help">
-        Click header to go to main page
+        Click header (or <a href="/index.html" style="inherit">here</a>) to go to main page
     </div>
 </body>
 
