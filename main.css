@@ -19,6 +19,17 @@ body {
     position: relative;
     background-color: #333;
     font-family: 'Roboto Mono', monospace;
+    font-size: 1.25em;
+    color: #ddd;
+}
+.info {
+  text-align: center;
+  width: 60vw;
+  margin: auto;
+  margin-bottom: 5vw;
+}
+li{
+  margin-bottom: 0.25vw;
 }
 body a {
     text-decoration: none;
@@ -31,7 +42,7 @@ body a:hover {
 }
 
 #container {
-  width: 80vw auto;
+  /*width: 80vw auto;*/
   margin: 5vw auto;
 }
 
