@@ -1,19 +1,6 @@
-@import url('simplegrid.css');
-
-@font-face {
-    font-family: 'PressStart';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Press Start 2P'), local('PressStart2P-Regular'), url(https://themes.googleusercontent.com/static/fonts/pressstart2p/v2/8Lg6LX8-ntOHUQnvQ0E7o3dD2UuwsmbX3BOp4SL_VwM.woff) format('woff');
-}
-
-@font-face {
-    font-family: 'Roboto Mono';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Roboto Mono'), local('RobotoMono-Regular'), url(https://fonts.gstatic.com/s/robotomono/v4/hMqPNLsu_dywMa4C_DEpY44P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
+@import url("/simplegrid.css") all;
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto+Mono");
+@import url("font-awesome/css/font-awesome.min.css") all;
 
 body {
     position: relative;
@@ -22,36 +9,14 @@ body {
     font-size: 1.25em;
     color: #ddd;
 }
-.info {
-  text-align: center;
-  width: 60vw;
-  margin: auto;
-  margin-bottom: 5vw;
-}
-li{
-  margin-bottom: 0.25vw;
-}
-body a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #999;
-}
 
-body a:hover {
-    color: #eee;
-}
-
-#container {
-  /*width: 80vw auto;*/
-  margin: 5vw auto;
-}
 
 #container>h1 {
+    font-family: 'Press Start 2P';
     text-align: center;
-    color: #fff;
+    color: #999;
     font-size: 4em;
     letter-spacing: 0px;
-    font-family: 'PressStart';
     font-weight: 400;
     /*Create overlap*/
     margin: 0;
@@ -59,15 +24,163 @@ body a:hover {
     /*Animation*/
     animation: glitch1 2.5s infinite;
 }
-@media handheld, only screen and (max-width: 767px) {
-  #container>h1 {
-    font-size: 10vw;
-  }
-  #container {
+
+.info {
+    text-align: center;
+    width: 60vw;
+    margin: auto;
+    margin-bottom: 5vw;
+}
+
+li {
+    margin-bottom: 0.25vmin;
+}
+
+body a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #999;
+}
+
+:target{
+  background-color: #ccc;
+}
+
+h2 {
+    text-align: center;
+    color: #ddd;
+    margin: 0px auto;
+}
+
+
+h3 {
+    font-weight: bolder;
+    color: #ccc;
+    margin-top: 1vw;
+    margin-bottom: 0;
+    padding-bottom: 0.25em;
+}
+
+#container a {
+    color: #999;
+    font-size: inherit;
     margin: 10vw auto;
-  }
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+    margin-top: 0;
+}
+
+ul.fa-ul {
+    margin: 0 0 2em 0;
+    padding: 0 0 0 1.75em;
+}
+
+ul.fa-ul > li{
+}
+
+.fa-li{
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+
+/*
+@media screen and (min-width: 1024px) {
 
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+}*/
+
+@media screen and (min-width: 768px) {
+    #simple {
+        display: none;
+    }
+    body a:hover {
+        color: #eee;
+    }
+    #container {
+        margin: 10vmin auto;
+    }
+    h2{
+      font-size: 150%;
+    }
+    h3{
+      font-size: 120%;
+    }
+}
+@media (max-width: 767px), not screen and (min-width: 768px) {
+    #container>h1 {
+        font-size: 10vw;
+    }
+    #container {
+        margin: 8vmin auto;
+    }
+
+    h2 {
+        font-size: 6vmin;
+    }
+
+    h3{
+      font-size: 5vw;
+      margin-bottom: 1vmin;
+      padding-bottom: 1vmin;
+    }
+
+    .content {
+        font-size: 5vw;
+    }
+    #easter {
+        display: none;
+    }
+    #simple {
+        display: inherit;
+    }
+    li {
+        margin-bottom: 1.5vw;
+    }
+    body a:hover {
+        color: inherit;
+    }
+}
+@media (min-width: 481px) and (max-width: 767px), (max-width: 480px){
+  #container {
+      margin: 8vw auto;
+  }
+  h2 {
+      font-size: 5vw;
+  }
+
+  h3{
+    font-size: 4vw;
+    margin-bottom: 1vmin;
+    padding-bottom: 1vmin;
+  }
+
+  .content {
+      font-size: 3.5vw;
+  }
+}
+@media (max-width: 480px) and (orientation:portrait){
+  h2 {
+      font-size: 7vmin;
+  }
+
+  h3{
+    font-size: 6vmin;
+    margin-bottom: 1vmin;
+    padding-bottom: 1vmin;
+  }
+
+  .content {
+      font-size: 5vmin;
+  }
+}
+
+
 
 #container>h1:nth-child(2) {
     color: #67f3da;
@@ -78,51 +191,12 @@ body a:hover {
     color: #f16f6f;
     animation: glitch3 5s infinite;
 }
-h2 {
-    text-align: center;
-    color: #ddd;
-    font-size: 150%;
-    margin: 0px auto;
-}
 
-h3 {
-    font-weight: bolder;
-    color: #ccc;
-    font-size: 120%;
-}
-#simple {
-  display: none;
-}
-@media handheld, only screen and (max-width: 767px) {
-  h2{
-    font-size: 8vw;
-  }
-  .content{
-    font-size: 5vw;
-  }
-  #easter {
-    display: none;
-  }
-  #simple {
-    display: inherit;
-  }
-  li{
-    margin-bottom: 1.5vw;
-  }
-  .content {
-    /*font-size: 2vw;*/
-    text-indent: 2vw;
-  }
 
-}
 
-.grid-pad{
-  padding-top: 0px;
-}
 
-ul {
-    padding: 0;
-    list-style-type: none;
+.grid-pad {
+    padding-top: 0px;
 }
 
 .links {
@@ -130,11 +204,6 @@ ul {
     margin: 0;
 }
 
-#container a {
-    color: inherit;
-    font-size: inherit;
-    margin: 10vw auto;
-}
 
 .help {
     text-align: center;
@@ -142,8 +211,6 @@ ul {
     color: #777;
     display: block;
 }
-
-
 
 
 /*Keyframes*/
