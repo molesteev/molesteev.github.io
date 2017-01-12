@@ -1,15 +1,13 @@
 @import url("/simplegrid.css") all;
 @import url("https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto+Mono");
 @import url("font-awesome/css/font-awesome.min.css") all;
-
 body {
     position: relative;
     background-color: #333;
     font-family: 'Roboto Mono', monospace;
-    font-size: 1.25em;
+    font-size: 1em;
     color: #ddd;
 }
-
 
 #container>h1 {
     font-family: 'Press Start 2P';
@@ -42,8 +40,8 @@ body a {
     color: #999;
 }
 
-:target{
-  background-color: #ccc;
+:target {
+    background-color: #ccc;
 }
 
 h2 {
@@ -51,7 +49,6 @@ h2 {
     color: #ddd;
     margin: 0px auto;
 }
-
 
 h3 {
     font-weight: bolder;
@@ -78,13 +75,13 @@ ul.fa-ul {
     padding: 0 0 0 1.75em;
 }
 
-ul.fa-ul > li{
+ul.fa-ul>li {}
+
+.fa-li {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
 }
 
-.fa-li{
-  padding: 0 0 0 0;
-  margin: 0 0 0 0;
-}
 
 /*
 @media screen and (min-width: 1024px) {
@@ -105,13 +102,17 @@ ul.fa-ul > li{
     #container {
         margin: 10vmin auto;
     }
-    h2{
-      font-size: 150%;
+    h2 {
+        font-size: 150%;
     }
-    h3{
-      font-size: 120%;
+    h3 {
+        font-size: 120%;
+    }
+    .longread{
+      margin: auto 10em;
     }
 }
+
 @media (max-width: 767px), not screen and (min-width: 768px) {
     #container>h1 {
         font-size: 10vw;
@@ -119,17 +120,14 @@ ul.fa-ul > li{
     #container {
         margin: 8vmin auto;
     }
-
     h2 {
         font-size: 6vmin;
     }
-
-    h3{
-      font-size: 5vw;
-      margin-bottom: 1vmin;
-      padding-bottom: 1vmin;
+    h3 {
+        font-size: 5vw;
+        margin-bottom: 1vmin;
+        padding-bottom: 1vmin;
     }
-
     .content {
         font-size: 5vw;
     }
@@ -145,42 +143,56 @@ ul.fa-ul > li{
     body a:hover {
         color: inherit;
     }
-}
-@media (min-width: 481px) and (max-width: 767px), (max-width: 480px){
-  #container {
-      margin: 8vw auto;
-  }
-  h2 {
-      font-size: 5vw;
-  }
-
-  h3{
-    font-size: 4vw;
-    margin-bottom: 1vmin;
-    padding-bottom: 1vmin;
-  }
-
-  .content {
+    .longread{
       font-size: 3.5vw;
-  }
-}
-@media (max-width: 480px) and (orientation:portrait){
-  h2 {
-      font-size: 7vmin;
-  }
-
-  h3{
-    font-size: 6vmin;
-    margin-bottom: 1vmin;
-    padding-bottom: 1vmin;
-  }
-
-  .content {
-      font-size: 5vmin;
-  }
+    }
+    .longread > h2{
+      font-size: 5vw;
+    }
+    .longread > h3{
+      font-size: 4vw;
+    }
 }
 
+@media (min-width: 481px) and (max-width: 767px), (max-width: 480px) {
+    #container {
+        margin: 8vw auto;
+    }
+    h2 {
+        font-size: 5vw;
+    }
+    h3 {
+        font-size: 4vw;
+        margin-bottom: 1vmin;
+        padding-bottom: 1vmin;
+    }
+    .content {
+        font-size: 3.5vw;
+    }
+}
 
+@media (max-width: 480px) and (orientation:portrait) {
+    h2 {
+        font-size: 7vmin;
+    }
+    h3 {
+        font-size: 6vmin;
+        margin-bottom: 1vmin;
+        padding-bottom: 1vmin;
+    }
+    .content {
+        font-size: 5vmin;
+    }
+}
+
+.longread {
+    text-align: justify;
+    word-wrap: break-word;
+}
+
+.longread > h3 + p{
+  margin-top: 0;
+}
 
 #container>h1:nth-child(2) {
     color: #67f3da;
@@ -192,9 +204,6 @@ ul.fa-ul > li{
     animation: glitch3 5s infinite;
 }
 
-
-
-
 .grid-pad {
     padding-top: 0px;
 }
@@ -203,7 +212,6 @@ ul.fa-ul > li{
     text-align: center;
     margin: 0;
 }
-
 
 .help {
     text-align: center;
